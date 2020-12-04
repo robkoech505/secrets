@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 
 //create a new db//
-mongoose.connect("'mongodb://localhost:27017/userDB", {
+mongoose.connect("'mongodb://localhost:27017/userDB",  {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true
@@ -29,7 +29,7 @@ mongoose.connect("'mongodb://localhost:27017/userDB", {
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
-    required: true
+    
   },
   password: {
     type: String,
